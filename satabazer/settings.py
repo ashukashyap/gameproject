@@ -74,13 +74,25 @@ WSGI_APPLICATION = 'satabazer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if DEBUG:
+    DATABASES = {
+      'default': {
+          'ENGINE': 'django.db.backends.sqlite3',
+          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+else:
+    DATABASES
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blogDB',
+        'USER': 'blog_admin',
+        'PASSWORD': 'testing123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -122,6 +134,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 
 MESSAGE_TAGS = {
     messages.ERROR : 'danger'
