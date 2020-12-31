@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['134.122.10.140']
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS =
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,17 +74,10 @@ WSGI_APPLICATION = 'satabazer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-      'default': {
-          'ENGINE': 'django.db.backends.sqlite3',
-          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
 
-else:
-    DATABASES
-        'default': {
+
+  DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blogdb',
         'USER': 'blog_admin',
@@ -93,7 +86,6 @@ else:
         'PORT': '',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
