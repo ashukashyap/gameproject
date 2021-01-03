@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'satabazer.wsgi.application'
 
 
 
-  DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blogdb',
