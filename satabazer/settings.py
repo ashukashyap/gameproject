@@ -74,18 +74,28 @@ WSGI_APPLICATION = 'satabazer.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+if DEBUG :
+    DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
-
-DATABASES = {
+else :
+    DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blogdb',
         'USER': 'blog_admin',
-        'PASSWORD': '12345',
+        'PASSWORD': '12345' ,  
         'HOST': 'localhost',
         'PORT': '',
     }
 }
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
