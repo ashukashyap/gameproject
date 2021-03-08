@@ -25,7 +25,7 @@ SECRET_KEY = 'i8!w1hv)hr_q_4(o)r_*if9x&ek^q*9$7_lwl4dgq3w2fpp-^%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.71.181.209']
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'satabazer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blogdb',
+        'USER': 'blog_admin',
+        'PASSWORD': 'testing123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
