@@ -64,3 +64,11 @@ def terms(request):
     return render(request,'terms.html')
 
 
+def desclimer(request):
+    return render(request,'desclimer.html')  
+
+
+def police(request):
+    return render(request,'privic.html')         
+
+
