@@ -25,7 +25,7 @@ SECRET_KEY = 'i8!w1hv)hr_q_4(o)r_*if9x&ek^q*9$7_lwl4dgq3w2fpp-^%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['167.71.181.209']
+ALLOWED_HOSTS = ['167.71.181.209', 'www.leaksatta.in','leaksattaking.in']
 
 
 # Application definition
