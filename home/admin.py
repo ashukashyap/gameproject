@@ -14,7 +14,7 @@ admin.site.register(Record)
 
 
 @admin.register(blog)
-class Postadmin(admin.ModelAdmin):
+class blogadmin(admin.ModelAdmin):
     class Media:
         js = ('tiny.js',)
     
