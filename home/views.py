@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post,Rahul,Table,Contact,Singup,Record,blog
 from django.contrib import messages
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -69,6 +70,10 @@ def desclimer(request):
 
 
 def police(request):
-    return render(request,'privic.html')         
+    return render(request,'privic.html')   
+
+
+def authorized_digital_sellers_view(request):
+    return HttpResponse('google.com, pub-4911980105395655, DIRECT, f08c47fec0942fa0')        
 
 
